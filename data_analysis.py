@@ -151,7 +151,7 @@ correlations.plot(kind='bar', ax=ax, edgecolor='black', color="#70dc80")
 ax.set_title('Feature Correlation with Outcome')
 ax.set_ylabel('Pearson Correlation')
 
-fig.savefig("plots/correlation_encoded_barchart.png", dpi=300, bbox_inches="tight")
+fig.savefig("plots/correlation_outcome_barchart.png", dpi=300, bbox_inches="tight")
 
 # ---------------- HEATMAP: MULTICOLLINEARITY SUBSET ----------------------------
 
