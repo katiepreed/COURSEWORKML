@@ -11,8 +11,8 @@
 
 ## 3. Activate virtual environment
 
-macOS/Linux: `source venv/bin/activate`
-windows: `venv\Scripts\activate`
+- macOS/Linux: `source venv/bin/activate`
+- windows: `venv\Scripts\activate`
 
 ## 4. Install dependencies
 
