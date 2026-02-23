@@ -91,7 +91,7 @@ for i, col in enumerate(skewed_numeric_features):
  
     adjust_text(texts, ax=ax[i])
  
-
+fig.suptitle("Box Plots of Skewed Numeric Features", fontsize=14)
 plt.tight_layout()
 fig.savefig("plots/boxplots.png", dpi=300)
 
@@ -99,7 +99,7 @@ fig.savefig("plots/boxplots.png", dpi=300)
 
 fig, ax = plt.subplots(figsize=(12, 5))
 ax.hist(train_data['outcome'], bins=40, edgecolor='black', color="#70dc80")
-ax.set_title(f'Outcome')
+ax.set_title('Outcome Distribution')
 
 plt.tight_layout()
 fig.savefig("plots/outcome.png", dpi=300)
@@ -139,6 +139,7 @@ fig.savefig("plots/nonskewed_histograms.png", dpi=300, bbox_inches="tight")
 fig, ax = plt.subplots(1, len(categorical_columns), figsize=(15, 5))
 for i, col in enumerate(categorical_columns):
     train_data[col].value_counts().plot(kind='bar', ax=ax[i], edgecolor='black', color="#70dc80")
+    ax[i].set_title(col)
 
 plt.tight_layout()
 fig.savefig("plots/categorical_barchart.png", dpi=300, bbox_inches="tight")
@@ -158,6 +159,7 @@ fig.savefig("plots/correlation_outcome_barchart.png", dpi=300, bbox_inches="tigh
 fig, ax = plt.subplots(figsize=(8, 6))
 mask = np.triu(np.ones_like(feature_col, dtype=bool))
 sns.heatmap(feature_col, mask=mask, annot=True, cmap='coolwarm', center=0, ax=ax)
+ax.set_title("Multicollinearity: Skewed Features")
 fig.savefig("plots/correlation_heatmap.png", dpi=300, bbox_inches="tight")
 
 
@@ -166,6 +168,7 @@ fig.savefig("plots/correlation_heatmap.png", dpi=300, bbox_inches="tight")
 fig, ax = plt.subplots(figsize=(16, 12))
 corr_matrix = train_onehot[all_features].corr() # type: ignore
 sns.heatmap(corr_matrix, annot=False, cmap='coolwarm', center=0, ax=ax)
+ax.set_title("Multicollinearity: All Features")
 fig.tight_layout()
 fig.savefig("plots/correlation_heatmap_all.png", dpi=300, bbox_inches="tight")
 
