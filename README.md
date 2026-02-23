@@ -2,8 +2,8 @@
 
 ## 1. Clone the repository
 
-`git clone https://github.com/katiepreed/COURSEWORKML.git`
-`cd Coursework1ML`
+clone repo: `git clone https://github.com/katiepreed/COURSEWORKML.git`
+cd into repo: `cd Coursework1ML`
 
 ## 2. Create a virtual environment
 
