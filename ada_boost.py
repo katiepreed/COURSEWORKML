@@ -28,6 +28,9 @@ grid_search = GridSearchCV(
 
 grid_search.fit(x_train, y_train)
 
-# R^2: 0.46190321867412826
+"""
+R^2: 0.46190321867412826
+Best parameters: {'estimator__max_depth': 7, 'learning_rate': 0.05, 'n_estimators': 500}
+"""
 print(f"R^2: {grid_search.best_score_}")
 print(f"Best parameters: {grid_search.best_params_}")

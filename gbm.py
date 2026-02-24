@@ -34,10 +34,12 @@ random_search = RandomizedSearchCV(
 random_search.fit(x_train, y_train)
 model = random_search.best_estimator_
 
-#  R^2: 0.4754682337706999
+"""
+R^2: 0.4754682337706999
+Best parameters: {'subsample': 0.7, 'n_estimators': 800, 'min_samples_leaf': 20, 'max_depth': 3, 'learning_rate': 0.01}
+"""
 print(f"R^2: {random_search.best_score_}") 
 print(f"Best parameters: {random_search.best_params_}")
-print("Feature Importance:")
 
 importance = pd.Series(model.feature_importances_, index=x_train.columns) # type: ignore
 importance.sort_values(ascending=False).plot(kind='bar', title='Feature Importance')
