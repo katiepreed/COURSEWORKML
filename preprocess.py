@@ -1,8 +1,7 @@
 """
 Shared preprocessing pipeline for all models:
 
-- removes imvalid rows
-- drops multicollinear features 
+- removes invalid rows
 - one-hot encodes the categorical columns
 - aligns the test columns to training columns
 - applies scaling to all features 
@@ -22,11 +21,6 @@ def preprocess_data():
     # remove outliers in y
     outlier_mask = train['y'] > 30 
     train = train[~outlier_mask].copy()
- 
-    # drop multicollinear features (apart from carat)
-    drop_cols = ['price', 'x', 'y', 'z']
-    train = train.drop(columns=drop_cols)
-    test = test.drop(columns=drop_cols)
 
     # one-hot encode categorical features
     categorical_cols = ['cut', 'color', 'clarity']
@@ -48,8 +42,3 @@ def preprocess_data():
     x_test = pd.DataFrame(scaler.transform(x_test), columns=features, index=x_test.index)
 
     return x_train, y_train, x_test
-
-
-
-
-

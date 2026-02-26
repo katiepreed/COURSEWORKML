@@ -180,6 +180,9 @@ print(f"\nNumber of categorical features: {num_categorical_features}")
 print(f"\nNumber of missing values: {num_missing_values}")
 print(f"\nNumber of duplicates: {num_duplicates}")
 
+print(f"\nMax y: {train_data['y'].max()}")
+print(f"\nMedian y: {train_data['y'].median()}")
+
 print(f"\nSkewness of numeric features:")
 print(numeric_skewness)
 

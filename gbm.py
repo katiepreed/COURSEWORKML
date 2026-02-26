@@ -35,7 +35,7 @@ random_search.fit(x_train, y_train)
 model = random_search.best_estimator_
 
 """
-R^2: 0.4754682337706999
+R^2: 0.47572781082173765
 Best parameters: {'subsample': 0.7, 'n_estimators': 800, 'min_samples_leaf': 20, 'max_depth': 3, 'learning_rate': 0.01}
 """
 print(f"R^2: {random_search.best_score_}") 

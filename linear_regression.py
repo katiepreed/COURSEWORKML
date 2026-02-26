@@ -19,9 +19,9 @@ params_elastic = {
 }
 
 """
-Ridge: R^2 = 0.28601802117614306, params = {'alpha': 100}
-Lasso: R^2 = 0.2865646186611932, params = {'alpha': 0.1}
-ElasticNet: R^2 = 0.28644773119193, params = {'alpha': 0.1, 'l1_ratio': 0.9}
+Ridge: R^2 = 0.2857087454680897, params = {'alpha': 100}
+Lasso: R^2 = 0.28654311195837856, params = {'alpha': 0.1}
+ElasticNet: R^2 = 0.28642262546539043, params = {'alpha': 0.1, 'l1_ratio': 0.9}
 """
 for name, model, params in [
     ('Ridge', Ridge(), params_ridge),
