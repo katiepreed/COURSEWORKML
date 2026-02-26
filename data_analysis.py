@@ -17,7 +17,7 @@ import numpy as np
 
 train_data = pd.read_csv('CW1_train.csv')
 
-numeric_columns = train_data.select_dtypes(include='number').columns.drop('outcome') # not inc
+numeric_columns = train_data.select_dtypes(include='number').columns.drop('outcome')
 categorical_columns = train_data.select_dtypes(include=['object', 'category', 'str']).columns
 
 # ---------------- ANALYSIS OF DATASET ---------------------------------------------

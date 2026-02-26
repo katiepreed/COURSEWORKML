@@ -14,7 +14,6 @@ def preprocess_data():
     test = pd.read_csv("CW1_test.csv")
 
     # select rows where x, y, z are not zero
-    # diamonds can't have zero dimensions
     x_y_z_mask = (train['x'] == 0) | (train['y'] == 0) | (train['z'] == 0)
     train = train[~x_y_z_mask].copy()
 
