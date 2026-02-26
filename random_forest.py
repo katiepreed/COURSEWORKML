@@ -31,7 +31,7 @@ grid_search.fit(x_train, y_train)
 model = grid_search.best_estimator_
 
 """
-R^2: 0.4594404434236875
+R^2: 0.45935683719305037
 Best parameters: {'max_depth': 10, 'min_samples_leaf': 10, 'min_samples_split': 2, 'n_estimators': 500}
 """
 print(f"R^2: {grid_search.best_score_}")
